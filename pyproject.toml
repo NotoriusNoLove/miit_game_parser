@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "miit-game-parser"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "miit_game_parser"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.0.2"
+plotly = "^5.14.1"
+requests = "^2.31.0"
+bs4 = "^0.0.1"
+nbformat = "^5.8.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.23.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
