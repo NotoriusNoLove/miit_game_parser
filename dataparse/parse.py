@@ -18,7 +18,7 @@ def game_parser(number: int) -> list:
             continue
         result.append((
             datetime.datetime.strptime(data[0][0:3] + " " + data[1], '%b %Y'),
-            data[2],
+            float(data[2]),
             number,
         ))
     return result

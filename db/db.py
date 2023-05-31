@@ -21,7 +21,7 @@ def create_table():
     with conn:
         cur.execute("""CREATE TABLE IF NOT EXISTS info_game(
         fname datetime,
-        lname TEXT,
+        lname float,
         gender TEXT);
         """)
         conn.commit()
