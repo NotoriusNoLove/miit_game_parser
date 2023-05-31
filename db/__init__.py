@@ -1,1 +1,1 @@
-from db import *
+from db.db import conn

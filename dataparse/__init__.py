@@ -1,3 +1,1 @@
-
-
-from .parse import game_parser
+from dataparse.parse import game_parser

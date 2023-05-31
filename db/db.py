@@ -1,7 +1,8 @@
 import sqlite3
 import time
+from dataparse import game_parser
 
-from dataparse.game_parser import game_parser
+
 conn = sqlite3.connect('orders.db')
 cur = conn.cursor()
 
@@ -19,8 +20,7 @@ def benchmark(func):
 def create_table():
     with conn:
         cur.execute("""CREATE TABLE IF NOT EXISTS info_game(
-        userid INT,
-        fname TEXT,
+        fname datetime,
         lname TEXT,
         gender TEXT);
         """)
@@ -32,7 +32,7 @@ def insert(number):
     with conn:
         user = game_parser(number)
 
-        cur.executemany("INSERT INTO info_game VALUES(?, ?, ?, ?);", user)
+        cur.executemany("INSERT INTO info_game VALUES(?, ?, ?);", user)
 
         conn.commit()
 

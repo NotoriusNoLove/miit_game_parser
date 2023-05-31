@@ -1,4 +1,4 @@
-from db import *
+from db.db import *
 
 
 def main():
@@ -10,5 +10,6 @@ def main():
         insert(number=item)
     print(get_all())
 
-# if __name__ == '__main__':
-#     main()
+
+if __name__ == '__main__':
+    main()
